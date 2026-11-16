@@ -861,7 +861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QB
   ball: {fileID: 448766498}
-  runSpeed: 4
+  runSpeed: 3.4
   ballInHand: 1
   bulletMode: 0
 --- !u!1 &244207361
@@ -2164,10 +2164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31912ed117672e243929b81e3191d799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Receiver
-  speed: 4.3
+  speed: 3.12
   route:
   - {x: 5, y: 0}
-  - {x: 3, y: -1.5}
+  - {x: 4, y: 3}
   hasBall: 0
 --- !u!114 &530589792
 MonoBehaviour:
@@ -2462,10 +2462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31912ed117672e243929b81e3191d799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Receiver
-  speed: 4.3
+  speed: 3.1
   route:
   - {x: 6, y: 0}
-  - {x: 3, y: 1.5}
+  - {x: 3, y: -5}
   hasBall: 0
 --- !u!114 &588572732
 MonoBehaviour:
@@ -4974,10 +4974,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31912ed117672e243929b81e3191d799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Receiver
-  speed: 4.2
+  speed: 3.15
   route:
   - {x: 4, y: 0}
-  - {x: 4, y: 0}
+  - {x: 5, y: 3}
   hasBall: 0
 --- !u!114 &2134780682
 MonoBehaviour:
