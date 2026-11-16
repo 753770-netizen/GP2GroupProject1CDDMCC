@@ -19,10 +19,10 @@ public class QB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale == 0f || ballInHand) return;
+        if (Time.timeScale == 0f || !ballInHand) return;
         var p = Pointer.current;
         if (p == null) return;
-        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return; //ignoring the taps on buttons
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return; // ignore taps on buttons
 
         Vector2 wp = Camera.main.ScreenToWorldPoint(p.position.ReadValue());
 
@@ -34,10 +34,14 @@ public class QB : MonoBehaviour
                 ball.Throw(transform.position, hit.GetComponent<Receiver>(), bulletMode);
                 ballInHand = false;
                 bulletMode = false;
+                var anim = GetComponent<SpriteAnimator>();
+                if (anim != null) anim.PlayThrow();
                 return;
             }
         }
-        //Hold and drag 2 run
-        if (p.press.isPressed) transform.position = Vector2.MoveTowards(transform.position, wp, runSpeed * Time.deltaTime);
+
+        // Hold and drag to run
+        if (p.press.isPressed)
+            transform.position = Vector2.MoveTowards(transform.position, wp, runSpeed * Time.deltaTime);
     }
 }

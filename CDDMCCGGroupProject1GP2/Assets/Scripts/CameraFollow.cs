@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target; //Our awesome QB
-    // Update is called once per frame
+    public Transform target;   // the QB
+
     void LateUpdate()
     {
         Transform t = GameManager.I.BallCarrier ? GameManager.I.BallCarrier : target;

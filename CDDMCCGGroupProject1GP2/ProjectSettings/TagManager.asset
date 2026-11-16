@@ -15,9 +15,9 @@ TagManager:
   - UI
   - Characters
   - 
-  - 
-  - Endzone
   - Field
+  - Endzone
+  - 
   - 
   - 
   - 
@@ -43,8 +43,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Field
+    uniqueID: 4016913071
+    locked: 0
   - name: Characters
     uniqueID: 1589672983
+    locked: 0
+  - name: End Zones
+    uniqueID: 2897177979
     locked: 0
   m_RenderingLayers:
   - Default
